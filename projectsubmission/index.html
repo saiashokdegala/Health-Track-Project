@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthTrack - Patient Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar" role="navigation" aria-label="Main Navigation">
+            <h1 class="logo">HealthTrack</h1>
+            <nav>
+                <a href="#" class="nav-item active"><i class="fas fa-home"></i> Overview</a>
+                <a href="#" class="nav-item"><i class="fas fa-calendar-alt"></i> Appointments</a>
+                <a href="#" class="nav-item"><i class="fas fa-pills"></i> Prescriptions</a>
+                <a href="#" class="nav-item"><i class="fas fa-chart-line"></i> Reports</a>
+                <a href="#" class="nav-item"><i class="fas fa-cog"></i> Settings</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="profile">
+                    <img src="https://via.placeholder.com/50" alt="Patient profile image" class="profile-img">
+                    <div class="profile-info">
+                        <span class="profile-name">Degala Sai Ashok</span>
+                        <span class="profile-status">Patient</span>
+                    </div>
+                </div>
+                <div class="notifications">
+                    <a href="#" aria-label="Notifications"><i class="fas fa-bell"></i></a>
+                </div>
+            </header>
+
+            <section class="dashboard-grid">
+                <section class="health-metrics-cards">
+                    <article class="metric-card card-teal" role="status" aria-label="Heart Rate">
+                        <i class="fas fa-heartbeat icon"></i>
+                        <div class="card-content">
+                            <span class="metric-label">Heart Rate</span>
+                            <span class="metric-value">72 <small>bpm</small></span>
+                        </div>
+                    </article>
+                    <article class="metric-card card-blue" role="status" aria-label="Blood Pressure">
+                        <i class="fas fa-tint icon"></i>
+                        <div class="card-content">
+                            <span class="metric-label">Blood Pressure</span>
+                            <span class="metric-value">120/80 <small>mmHg</small></span>
+                        </div>
+                    </article>
+                    <article class="metric-card card-green" role="status" aria-label="Oxygen Level">
+                        <i class="fas fa-lungs icon"></i>
+                        <div class="card-content">
+                            <span class="metric-label">Oxygen Level</span>
+                            <span class="metric-value">98 <small>%</small></span>
+                        </div>
+                    </article>
+                    <article class="metric-card card-yellow" role="status" aria-label="BMI">
+                        <i class="fas fa-weight-scale icon"></i>
+                        <div class="card-content">
+                            <span class="metric-label">BMI</span>
+                            <span class="metric-value">22.5</span>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="appointments-section" aria-labelledby="appointments-heading">
+                    <h2 id="appointments-heading">Upcoming Appointments</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Time</th>
+                                <th scope="col">Doctor</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Date">2025-09-15</td>
+                                <td data-label="Time">10:00 AM</td>
+                                <td data-label="Doctor">Dr. Smith</td>
+                                <td data-label="Status" class="status-upcoming">Upcoming</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Date">2025-09-01</td>
+                                <td data-label="Time">02:30 PM</td>
+                                <td data-label="Doctor">Dr. Johnson</td>
+                                <td data-label="Status" class="status-completed">Completed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <div class="flex-container">
+                    <section class="patient-profile" aria-labelledby="profile-heading">
+                        <h2 id="profile-heading">Patient Profile</h2>
+                        <div class="profile-details">
+                            <p><strong>Name:</strong> Degala Sai Ashok</p>
+                            <p><strong>Age:</strong> 25</p>
+                            <p><strong>Gender:</strong> Male</p>
+                            <p><strong>Email:</strong> saidegala23@gmail.com</p>
+                            <p><strong>Phone:</strong> +91 6305434117</p>
+                            <p><strong>Doctor:</strong> Dr. R. Sharma</p>
+                        </div>
+                    </section>
+
+                    <section class="prescription-section" aria-labelledby="prescription-heading">
+                        <h2 id="prescription-heading">Prescriptions</h2>
+                        <ul class="prescription-list">
+                            <li>
+                                <strong>Medication:</strong> Ibuprofen
+                                <span><strong>Dosage:</strong> 200mg</span>
+                                <span><strong>Duration:</strong> 7 days</span>
+                            </li>
+                            <li>
+                                <strong>Medication:</strong> Amoxicillin
+                                <span><strong>Dosage:</strong> 500mg</span>
+                                <span><strong>Duration:</strong> 10 days</span>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

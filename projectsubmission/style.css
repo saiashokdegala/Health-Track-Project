@@ -1,0 +1,180 @@
+/* Unique Color Palette and Typography */
+:root {
+    --primary-color: #4CAF50; /* A fresh green */
+    --secondary-color: #2196F3; /* A calming blue */
+    --background-light: #f4f6f9;
+    --text-dark: #333;
+    --text-light: #666;
+    --card-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+}
+
+/* 1. CSS Grid for Overall Layout */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Sidebar & main content */
+    min-height: 100vh;
+}
+
+.sidebar {
+    background: #fff;
+    padding: 30px 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.main-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* 2. Responsive Media Queries */
+@media (min-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 2fr 1fr; /* Two columns on large screens */
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        display: none; /* Hide sidebar on small screens */
+    }
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* 3. Unique Styling */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.nav-item {
+    display: block;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Health Metrics Cards */
+.health-metrics-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.metric-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.metric-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.metric-card .metric-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.card-teal { background: #e0f2f1; color: #00796b; }
+.card-blue { background: #e3f2fd; color: #1565c0; }
+.card-green { background: #e8f5e9; color: #2e7d32; }
+.card-yellow { background: #fffde7; color: #ff8f00; }
+
+/* Appointments Table Styling */
+.appointments-section {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: var(--card-shadow);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.status-upcoming { color: #f9a825; font-weight: bold; }
+.status-completed { color: #2e7d32; font-weight: bold; }
+
+/* Patient Profile & Prescription Styling */
+.patient-profile, .prescription-section {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: var(--card-shadow);
+}
+
+.prescription-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.prescription-list li {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 5px solid var(--secondary-color);
+}
